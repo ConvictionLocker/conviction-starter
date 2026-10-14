@@ -2,9 +2,9 @@ name: Starter
 
 on:
   pull_request:
-    branches: [staging]
+    branches: [main]
   push:
-    branches: [staging, feat/standalone-starter]
+    branches: [main, feat/standalone-starter]
 
 permissions:
   contents: read
