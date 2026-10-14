@@ -4,7 +4,7 @@ on:
   pull_request:
     branches: [main]
   push:
-    branches: [main, feat/standalone-starter]
+    branches: [main]
 
 permissions:
   contents: read
@@ -26,3 +26,5 @@ jobs:
           cache: npm
       - run: npm ci --ignore-scripts
       - run: npm run build
+      - run: npx playwright install --with-deps chromium
+      - run: npm test
